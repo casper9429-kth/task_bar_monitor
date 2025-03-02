@@ -6,9 +6,9 @@ import (
 	"strings"
 	"sync"
 
+	"github.com/casper9429-kth/task_bar_monitor/internal/metrics"
+	"github.com/casper9429-kth/task_bar_monitor/internal/settings"
 	"github.com/getlantern/systray"
-	"github.com/yourusername/ubuntu-system-monitor/internal/metrics"
-	"github.com/yourusername/ubuntu-system-monitor/internal/settings"
 )
 
 // Indicator represents the system tray indicator

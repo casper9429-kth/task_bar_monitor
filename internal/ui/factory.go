@@ -3,8 +3,8 @@ package ui
 import (
 	"log"
 
-	"github.com/yourusername/ubuntu-system-monitor/internal/metrics"
-	"github.com/yourusername/ubuntu-system-monitor/internal/settings"
+	"github.com/casper9429-kth/task_bar_monitor/internal/metrics"
+	"github.com/casper9429-kth/task_bar_monitor/internal/settings"
 )
 
 // TrayInterface defines the interface for system tray implementations

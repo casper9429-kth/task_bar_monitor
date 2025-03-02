@@ -5,9 +5,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/yourusername/ubuntu-system-monitor/internal/metrics"
-	"github.com/yourusername/ubuntu-system-monitor/internal/settings"
-	"github.com/yourusername/ubuntu-system-monitor/internal/ui"
+	"github.com/casper9429-kth/task_bar_monitor/internal/metrics"
+	"github.com/casper9429-kth/task_bar_monitor/internal/settings"
+	"github.com/casper9429-kth/task_bar_monitor/internal/ui"
 )
 
 // Application represents the main application

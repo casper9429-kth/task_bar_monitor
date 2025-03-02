@@ -1,4 +1,4 @@
-module github.com/yourusername/ubuntu-system-monitor
+module github.com/casper9429-kth/task_bar_monitor
 
 go 1.16
 

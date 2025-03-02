@@ -5,7 +5,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/yourusername/ubuntu-system-monitor/internal/app"
+	"github.com/casper9429-kth/task_bar_monitor/internal/app"
 )
 
 func main() {

@@ -7,7 +7,7 @@ import (
 
 const (
 	// AppName is the name of the application, used for config directories
-	AppName = "ubuntu-system-monitor"
+	AppName = "task_bar_monitor"
 
 	// ConfigFileName is the name of the configuration file
 	ConfigFileName = "config.json"

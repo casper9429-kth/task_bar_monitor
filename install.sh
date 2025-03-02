@@ -33,10 +33,10 @@ fi
 
 # Build the application
 echo "Building the application..."
-go build -o ubuntu-system-monitor ./cmd/main.go
+go build -o task_bar_monitor ./cmd/main.go
 
 echo "Installation complete! You can run the application with:"
-echo "./ubuntu-system-monitor"
+echo "./task_bar_monitor"
 echo
 echo "To set up autostart on login, run:"
 echo "./utils/setup_autostart.sh"

@@ -4,7 +4,7 @@ import (
 	"log"
 
 	"github.com/andlabs/ui"
-	"github.com/yourusername/ubuntu-system-monitor/internal/settings"
+	"github.com/casper9429-kth/task_bar_monitor/internal/settings"
 )
 
 // SettingsWindow represents the settings window UI

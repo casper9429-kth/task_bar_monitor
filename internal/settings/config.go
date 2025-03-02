@@ -25,7 +25,7 @@ type Config struct {
 // DefaultSettings returns the default application settings
 func DefaultSettings() *Config {
 	homeDir, _ := os.UserHomeDir()
-	configDir := filepath.Join(homeDir, ".config", "ubuntu-system-monitor")
+	configDir := filepath.Join(homeDir, ".config", "task_bar_monitor")
 
 	return &Config{
 		ShowCPU:               true,

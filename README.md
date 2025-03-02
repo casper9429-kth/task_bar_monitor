@@ -1,8 +1,8 @@
-# Ubuntu System Monitor
+# Task Bar Monitor
 
 <img src="assets/icons/app-icon.svg" align="right" width="128">
 
-Ubuntu System Monitor is a lightweight application developed in Go that displays real-time system metrics including CPU usage, memory usage, network usage, and disk usage directly in the Ubuntu taskbar. The application is designed to be user-friendly and customizable.
+Task Bar Monitor is a lightweight application developed in Go that displays real-time system metrics including CPU usage, memory usage, network usage, and disk usage directly in the Ubuntu taskbar. The application is designed to be user-friendly and customizable.
 
 ## Features
 
@@ -40,18 +40,18 @@ Ubuntu System Monitor is a lightweight application developed in Go that displays
 
 2. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/ubuntu-system-monitor.git
-   cd ubuntu-system-monitor
+   git clone https://github.com/casper9429-kth/task_bar_monitor.git
+   cd task_bar_monitor
    ```
 
 3. Build the application:
    ```bash
-   go build -o ubuntu-system-monitor ./cmd/main.go
+   go build -o task_bar_monitor ./cmd/main.go
    ```
 
 4. Run the application:
    ```bash
-   ./ubuntu-system-monitor
+   ./task_bar_monitor
    ```
 
 ## Usage
@@ -76,7 +76,7 @@ The application supports the following command line options:
 
 Example:
 ```bash
-./ubuntu-system-monitor -debug
+./task_bar_monitor -debug
 ```
 
 ## Troubleshooting
@@ -84,7 +84,7 @@ Example:
 If you encounter any issues, try running the application with debugging enabled:
 
 ```bash
-./ubuntu-system-monitor -debug
+./task_bar_monitor -debug
 ```
 
 For more detailed troubleshooting, check the debugging.md file.
@@ -95,4 +95,4 @@ Contributions are welcome! Please feel free to submit a pull request or open an 
 
 ## License
 
-This project is licensed under the MIT License. See the LICENSE file for more details.
+This project is licensed under the MIT License.

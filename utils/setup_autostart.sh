@@ -3,9 +3,9 @@
 
 # Get the current directory (parent of utils)
 DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/.."
-EXEC_PATH="$DIR/ubuntu-system-monitor"
+EXEC_PATH="$DIR/task_bar_monitor"
 ICON_PATH="$DIR/assets/icons/app-icon.svg"
-DESKTOP_FILE="$HOME/.config/autostart/ubuntu-system-monitor.desktop"
+DESKTOP_FILE="$HOME/.config/autostart/task_bar_monitor.desktop"
 
 # Parse command line arguments
 ACTION="install"
@@ -18,7 +18,7 @@ install_autostart() {
     # Check if the executable exists
     if [ ! -f "$EXEC_PATH" ]; then
         echo "Error: Executable not found at $EXEC_PATH"
-        echo "Please run 'go build -o ubuntu-system-monitor ./cmd/main.go' first."
+        echo "Please run 'go build -o task_bar_monitor ./cmd/main.go' first."
         exit 1
     fi
 
