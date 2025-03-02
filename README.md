@@ -1,5 +1,7 @@
 # Ubuntu System Monitor
 
+<img src="assets/icons/app-icon.svg" align="right" width="128">
+
 Ubuntu System Monitor is a lightweight application developed in Go that displays real-time system metrics including CPU usage, memory usage, network usage, and disk usage directly in the Ubuntu taskbar. The application is designed to be user-friendly and customizable.
 
 ## Features
@@ -60,6 +62,10 @@ Ubuntu System Monitor is a lightweight application developed in Go that displays
 - To have the application start automatically at login, use the provided autostart script:
   ```bash
   ./utils/setup_autostart.sh
+  ```
+- Remove the autostart entry with:
+  ```bash
+  ./utils/setup_autostart.sh --remove
   ```
 
 ### Command Line Options
