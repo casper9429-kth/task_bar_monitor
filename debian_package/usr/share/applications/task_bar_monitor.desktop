@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Task Bar Monitor
+Exec=/usr/bin/task_bar_monitor
+Icon=/usr/share/icons/hicolor/scalable/apps/task-bar-monitor.svg
+Comment=System metrics in the taskbar
+Categories=Utility;System;Monitor;
+Terminal=false
+X-GNOME-Autostart-enabled=true

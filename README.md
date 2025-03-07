@@ -28,6 +28,9 @@ Task Bar Monitor is a lightweight application developed in Go that displays real
 
 ## Installation
 
+
+## Building from Source
+
 1. Install required system dependencies:
    ```bash
    # For Ubuntu/Debian
@@ -56,7 +59,7 @@ Task Bar Monitor is a lightweight application developed in Go that displays real
 
 ## Usage
 
-- After launching the application, you will see an icon in the system tray.
+- After launching the application, you will see an icon `...` in the system tray.
 - Click on the icon to view the current system metrics.
 - Right-click the icon and select "Settings" to customize your preferences.
 - To have the application start automatically at login, use the provided autostart script:

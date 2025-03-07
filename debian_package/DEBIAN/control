@@ -1,0 +1,14 @@
+Package: task-bar-monitor
+Version: 1.0.0
+Section: utils
+Priority: optional
+Architecture: amd64
+Depends: libayatana-appindicator3-1
+Maintainer: Casper Augustsson Savinov <cas.aug.sav@gmail.com>
+Description: System metrics monitor for the taskbar
+ Task Bar Monitor displays real-time system metrics
+ including CPU, memory, network, and disk usage
+ directly in your Ubuntu taskbar.
+
+
+

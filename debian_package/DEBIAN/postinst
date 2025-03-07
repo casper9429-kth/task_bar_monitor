@@ -1,0 +1,19 @@
+#!/bin/bash
+set -e
+
+# Update desktop database and icon cache
+if [ -x "$(command -v update-desktop-database)" ]; then
+    update-desktop-database -q
+fi
+
+if [ -x "$(command -v gtk-update-icon-cache)" ]; then
+    gtk-update-icon-cache -q -t -f /usr/share/icons/hicolor
+fi
+
+echo "Task Bar Monitor has been installed successfully!"
+echo "You can start it from your applications menu or run 'task_bar_monitor' in terminal"
+
+# No need to automatically start the application
+# Users can use the desktop entry which will be added to the autostart location if they choose to
+
+exit 0

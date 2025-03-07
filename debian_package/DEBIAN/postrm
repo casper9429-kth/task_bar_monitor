@@ -1,0 +1,21 @@
+#!/bin/bash
+set -e
+
+# Clean up user configuration if purging the package
+if [ "$1" = "purge" ]; then
+  # Remove config files in user's home directory
+  rm -rf ~/.config/task_bar_monitor 2> /dev/null || true
+fi
+
+# Update desktop database and icon cache
+if [ -x "$(command -v update-desktop-database)" ]; then
+    update-desktop-database -q
+fi
+
+if [ -x "$(command -v gtk-update-icon-cache)" ]; then
+    gtk-update-icon-cache -q -t -f /usr/share/icons/hicolor
+fi
+
+echo "Task Bar Monitor has been successfully removed from your system."
+
+exit 0

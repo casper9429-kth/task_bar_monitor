@@ -1,0 +1,14 @@
+#!/bin/bash
+set -e
+
+# Kill any running instances of the application
+pkill -f task_bar_monitor || true
+
+# Remove from autostart if present
+if [ -f "$HOME/.config/autostart/task_bar_monitor.desktop" ]; then
+    rm -f "$HOME/.config/autostart/task_bar_monitor.desktop"
+fi
+
+echo "Removing Task Bar Monitor..."
+
+exit 0
