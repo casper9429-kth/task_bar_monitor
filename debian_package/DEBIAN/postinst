@@ -10,10 +10,31 @@ if [ -x "$(command -v gtk-update-icon-cache)" ]; then
     gtk-update-icon-cache -q -t -f /usr/share/icons/hicolor
 fi
 
-echo "Task Bar Monitor has been installed successfully!"
-echo "You can start it from your applications menu or run 'task_bar_monitor' in terminal"
+# Get the real user who is running the installation (not root)
+REAL_USER=${SUDO_USER:-$USER}
+REAL_HOME=$(getent passwd "$REAL_USER" | cut -d: -f6)
 
-# No need to automatically start the application
-# Users can use the desktop entry which will be added to the autostart location if they choose to
+# Create autostart directory if it doesn't exist
+mkdir -p "$REAL_HOME/.config/autostart"
+
+# Create desktop entry file for autostart
+cat > "$REAL_HOME/.config/autostart/task_bar_monitor.desktop" << EOL
+[Desktop Entry]
+Type=Application
+Name=Task Bar Monitor
+Exec=/usr/bin/task_bar_monitor
+Icon=/usr/share/icons/hicolor/scalable/apps/task-bar-monitor.svg
+Comment=System metrics in the taskbar
+Categories=Utility;System;Monitor;
+Terminal=false
+X-GNOME-Autostart-enabled=true
+EOL
+
+# Fix permissions for the autostart file
+chown "$REAL_USER:$(id -gn "$REAL_USER")" "$REAL_HOME/.config/autostart/task_bar_monitor.desktop"
+
+echo "Task Bar Monitor has been installed successfully!"
+echo "It will automatically start when you log in."
+echo "You can also start it manually by running 'task_bar_monitor' in terminal"
 
 exit 0
