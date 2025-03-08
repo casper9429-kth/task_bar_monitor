@@ -28,8 +28,36 @@ Task Bar Monitor is a lightweight application developed in Go that displays real
 
 ## Installation
 
+### Using Debian Package (Recommended)
+1. Download the latest Debian package or build it yourself:
+   ```bash
+   ./utils/build_deb_package.sh
+   ```
 
-## Building from Source
+2. Install the package:
+   ```bash
+   sudo dpkg -i task-bar-monitor_1.0.0_amd64.deb
+   ```
+
+3. If there are dependency issues, resolve them with:
+   ```bash
+   sudo apt-get install -f
+   ```
+
+The application will be automatically installed and configured to start when you log in.
+
+### Uninstalling
+To remove the application:
+```bash
+sudo apt remove task-bar-monitor
+```
+
+To completely remove the application including any configuration files:
+```bash
+sudo apt purge task-bar-monitor
+```
+
+### Building from Source
 
 1. Install required system dependencies:
    ```bash
@@ -48,6 +76,14 @@ Task Bar Monitor is a lightweight application developed in Go that displays real
    ```
 
 3. Build the application:
+   You can build the application in two ways:
+
+   a. Using the install script (recommended):
+   ```bash
+   ./utils/install.sh
+   ```
+   
+   b. Manual compilation:
    ```bash
    go build -o task_bar_monitor ./cmd/main.go
    ```
@@ -57,19 +93,27 @@ Task Bar Monitor is a lightweight application developed in Go that displays real
    ./task_bar_monitor
    ```
 
+5. Optional: Set up autostart to run at login:
+   ```bash
+   ./utils/setup_autostart.sh
+   ```
+
+   To remove the autostart entry:
+   ```bash
+    ./utils/setup_autostart.sh --remove
+    ```
+
+6. For developers: If you want to build a Debian package from source:
+   ```bash
+   ./utils/build_deb_package.sh
+   ```
+   This will create a `.deb` file that can be installed with `sudo dpkg -i task-bar-monitor_1.0.0_amd64.deb`
+
 ## Usage
 
 - After launching the application, you will see an icon `...` in the system tray.
 - Click on the icon to view the current system metrics.
 - Right-click the icon and select "Settings" to customize your preferences.
-- To have the application start automatically at login, use the provided autostart script:
-  ```bash
-  ./utils/setup_autostart.sh
-  ```
-- Remove the autostart entry with:
-  ```bash
-  ./utils/setup_autostart.sh --remove
-  ```
 
 ### Command Line Options
 
